@@ -1,0 +1,38 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  
+  
+}
+
+h1 {
+  padding: 15px 0px 15px 0px;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 10px;
+}
+
+div {
+  display: block;
+}
+
+form {
+  margin: 0 auto;
+  padding: 0px 10px 10px 0px;
+}
+
+.main-weather {
+  
+  
+  margin: 0 auto;
+
+}
+
+a {
+  display: inline-block;
+ 
+ 
+  margin: 0 auto;
+}
