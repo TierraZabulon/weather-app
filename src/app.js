@@ -1,34 +1,31 @@
-let weather = {
-  paris: {
-    temp: 19.7,
-    humidity: 80,
-  },
-  tokyo: {
-    temp: 17.3,
-    humidity: 50,
-  },
-  lisbon: {
-    temp: 30.2,
-    humidity: 20,
-  },
-  "san francisco": {
-    temp: 20.9,
-    humidity: 100,
-  },
-  moscow: {
-    temp: -5,
-    humidity: 20,
-  },
-};
-
 // Current Date
 
-let today = new Date();
-let time = today.getHours() + ":" + today.getMinutes();
+const dateFormat = (date) => {
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let dayIndex = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[dayIndex];
+  return `${day} ${hours}:${minutes}`;
+};
 
 const timeShow = (event) => {
   let h2 = document.querySelector("h2");
-  h2.innerHTML = ` ${today} ${time}`;
+  h2.innerHTML = ` ${day} ${hours}`;
 };
 timeShow();
 
