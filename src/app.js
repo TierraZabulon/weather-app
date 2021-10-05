@@ -25,6 +25,7 @@ const formatDate = (date) => {
   return `${day} ${hours}:${minutes}`;
 };
 
+// Display weather
 const displayWeatherCondition = (response) => {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = Math.round(
@@ -39,6 +40,7 @@ const displayWeatherCondition = (response) => {
     response.data.weather[0].main;
 };
 
+// Search for city
 const searchCity = (city) => {
   let apiKey = "17ad6e67aa629189f73b053634668b20";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
@@ -58,11 +60,13 @@ const searchLocation = (position) => {
   axios.get(apiUrl).then(displayWeatherCondition);
 };
 
+//Current location
 const getCurrentLocation = (event) => {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 };
 
+// Convert Temperature
 const convertToFahrenheit = (event) => {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
