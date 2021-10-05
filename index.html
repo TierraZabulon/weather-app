@@ -18,13 +18,26 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
   </head>
   <body>
     <div class="container">
       <div class="top-main"></div>
-      <h1>Tampa,Florida</h1>
-      <h2 id="time-display"></h2>
+      <h1 id="city"></h1>
+      
+      
+      
+      
+      
+       <h2 id="time-display"></h2>
+      <ul>
+        
+        <li>Wind: <span id="wind"></span> </li>
+        <li>Humidity: <span id="humidity"></span> </li>
+       
+      </ul>
+     
 
 
 
@@ -38,10 +51,10 @@
           class="today-weather"
         />
 
-       <p >
-  <a href="#"id="tempf">80°F</a>|<a href="#" id="tempc">60°C</a>
+       <p> <span id="description"></span></p>
 
-</p>
+       <p> <span id="temp"></span>°F</p>
+  
          
         
       </p>
@@ -50,8 +63,8 @@
       <form id="search-form">
         <label> Location</label>
         <input type="search" id="search-input" name="q" placeholder="Type City Here" />
-        <button>search</button>
-        <button id="current-location">Current Location</button>
+        <button id="search-button">search</button>
+        <button id="current-location-button">Current Location</button>
       </form>
 
       <p class="week-forecast">5 Day Forecast</p>
