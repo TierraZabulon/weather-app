@@ -1,6 +1,12 @@
 body {
   font-family: poppins, arial, sans-serif;
-  background-color: #f2e9e4;
+  background: rgb(252, 213, 206);
+  background: linear-gradient(
+    90deg,
+    rgba(252, 213, 206, 1) 0%,
+    rgba(250, 225, 221, 1) 35%,
+    rgba(255, 215, 186, 1) 100%
+  );
 }
 
 h1 {
@@ -11,8 +17,8 @@ h1 {
 }
 
 ul {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 li {
@@ -30,6 +36,12 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+input#city-input.form-control {
+  margin: auto 10px;
+  padding: 5px;
+  width: 300px;
+}
+
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
@@ -37,7 +49,7 @@ li:first-letter {
 
 .weather-app {
   padding: 10px;
-  border: 1px solid #ffcdb2;
+  border: 3px solid #ffcdb2;
   border-radius: 5px;
 }
 
@@ -69,11 +81,13 @@ li:first-letter {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
+
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:visited {
   background-color: #8064a2 !important;
+  font-size: 10px;
 }
 .clearfix {
   position: relative;
@@ -81,6 +95,12 @@ li:first-letter {
   padding: 0px;
   margin: 0 auto;
 }
+
 .links {
   text-align: center;
+}
+div.col-6 {
+  margin: 5px;
+  padding: 0px;
+  height: 2%;
 }
