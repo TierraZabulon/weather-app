@@ -104,3 +104,7 @@ div.col-6 {
   padding: 0px;
   height: 2%;
 }
+.weather-forecast {
+  margin: auto;
+  padding: 10px;
+}
